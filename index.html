@@ -14,28 +14,34 @@
 
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">   
+
+
+
 </head>
 <body class="font-[Poppins] bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
 
     <!-- Header -->
     <header>
-      <nav class="bg-slate-900 p-4 sticky top-0 shadow-lg z-50">
-  <div class="container mx-auto flex justify-between items-center">
+      <nav class="bg-slate-900 p-4 flex justify-between items-center">
+          <h2 class="text-pink-400 text-2xl font-bold">
+    Portfolio
+</h2>
+   <button id="menu-btn" class="text-white text-2xl">
+    <i class="fas fa-bars"></i>
+</button>
+    <button id="theme-toggle" class="text-2xl text-pink-400">
+    🌙
+</button>
 
-    <h1 class="text-2xl font-bold text-pink-400">
-      Personal Portfolio
-    </h1>
-
-    <ul class="flex gap-6 font-medium">
-      <li><a href="#home" class="text-pink-400 hover:text-white transition duration-300">Home</a></li>
-      <li><a href="#about" class="text-pink-400 hover:text-white transition duration-300">About</a></li>
-      <li><a href="#skills" class="text-pink-400 hover:text-white transition duration-300">Skills</a></li>
-      <li><a href="#projects" class="text-pink-400 hover:text-white transition duration-300">Projects</a></li>
-      <li><a href="#contact" class="text-pink-400 hover:text-white transition duration-300">Contact</a></li>
-    </ul>
-
-  </div>
+<ul id="menu"
+    class="flex gap-6 font-medium">
+    <li><a href="#home" class="nav-link">Home</a></li>
+    <li><a href="#about" class="nav-link">About</a></li>
+    <li><a href="#skills" class="nav-link">Skills</a></li>
+    <li><a href="#projects" class="nav-link">Projects</a></li>
+    <li><a href="#contact" class="nav-link">Contact</a></li>
+</ul>
 </nav>
     </header>
 
@@ -53,9 +59,9 @@
         <span class="text-pink-400">Bercin Shanikha</span>
     </h1>
 
-    <p class="mt-4 text-xl text-gray-300">
-        Frontend Developer | Java Enthusiast | Problem Solver
-    </p>
+  <p class="mt-4 text-xl text-gray-300">
+    <span id="typing-text"></span>
+</p>
 
     <div class="mt-8 flex gap-4">
         <a href="#projects"
@@ -72,7 +78,7 @@
 </section>
 
         <!-- About Section -->
-        <section id="about" class="py-20 px-6">
+        <section id="about" class="fade-section py-20 px-6">
 
 <div class="max-w-4xl mx-auto bg-white/10 backdrop-blur-lg p-10 rounded-3xl shadow-2xl">
 
@@ -90,44 +96,54 @@ real-world problems.
 
 </section>
 
-        <!-- Skills Section -->
-       <h2 class="text-4xl font-bold text-center mb-12 text-pink-400">
+       <!-- Skills Section -->
+<section id="skills" class="py-20 px-6 fade-section">
+
+  <h2 class="text-4xl font-bold text-center mb-12 text-pink-400">
     My Skills
-</h2>
-     <div class="grid md:grid-cols-3 gap-8">
+  </h2>
 
-  <div class="bg-gradient-to-r from-cyan-500 to-blue-600 p-8 rounded-2xl text-center hover:scale-105 transition">
-    <i class="fab fa-html5 text-5xl mb-4"></i>
-    <h3 class="text-2xl font-bold">HTML</h3>
-  </div>
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
 
-  <div class="bg-gradient-to-r from-indigo-500 to-purple-600 p-8 rounded-2xl text-center hover:scale-105 transition">
-    <i class="fab fa-css3-alt text-5xl mb-4"></i>
-    <h3 class="text-2xl font-bold">CSS</h3>
-  </div>
+    <div class="bg-gradient-to-r from-cyan-500 to-blue-600 p-8 rounded-2xl text-center hover:scale-105 transition duration-300">
+      <i class="fab fa-html5 text-5xl mb-4"></i>
+      <h3 class="text-2xl font-bold">HTML</h3>
+    </div>
 
+    <div class="bg-gradient-to-r from-indigo-500 to-purple-600 p-8 rounded-2xl text-center hover:scale-105 transition duration-300">
+      <i class="fab fa-css3-alt text-5xl mb-4"></i>
+      <h3 class="text-2xl font-bold">CSS</h3>
+    </div>
 
-  <div class="bg-gradient-to-r from-red-500 to-orange-600 p-8 rounded-2xl text-center hover:scale-105 transition">
-    <i class="fab fa-java text-5xl mb-4"></i>
-    <h3 class="text-2xl font-bold">Java</h3>
-  </div>
+    <div class="bg-gradient-to-r from-yellow-400 to-orange-500 p-8 rounded-2xl text-center hover:scale-105 transition duration-300">
+      <i class="fab fa-js text-5xl mb-4"></i>
+      <h3 class="text-2xl font-bold">JavaScript</h3>
+    </div>
 
-  <div class="bg-gradient-to-r from-emerald-500 to-green-600 p-8 rounded-2xl text-center hover:scale-105 transition">
-    <i class="fas fa-database text-5xl mb-4"></i>
-    <h3 class="text-2xl font-bold">SQL</h3>
-  </div>
+    <div class="bg-gradient-to-r from-red-500 to-orange-600 p-8 rounded-2xl text-center hover:scale-105 transition duration-300">
+      <i class="fab fa-java text-5xl mb-4"></i>
+      <h3 class="text-2xl font-bold">Java</h3>
+    </div>
+
+    <div class="bg-gradient-to-r from-emerald-500 to-green-600 p-8 rounded-2xl text-center hover:scale-105 transition duration-300">
+      <i class="fas fa-database text-5xl mb-4"></i>
+      <h3 class="text-2xl font-bold">SQL</h3>
+    </div>
 
  
 
-</div>
+  </div>
 
-        <!-- Projects Section -->
-      <section id="projects" class="py-20 px-6">
+</section>  <!-- Projects Section -->
+      <section id="projects" class="fade-section py-20 px-6">
 
   <h2 class="text-4xl font-bold text-center mb-12 text-pink-400">
     My Projects
   </h2>
-
+<button
+class="openModal mt-4 bg-pink-500 px-4 py-2 rounded">
+View Project
+</button>
   <div class="grid md:grid-cols-3 gap-8">
 
     <!-- Project 1 -->
@@ -185,44 +201,50 @@ real-world problems.
 </section>
 
         <!-- Contact Section -->
-       <section id="contact" class="py-20 px-6">
+       <section id="contact" class="fade-section py-20 px-6">
 
   <h2 class="text-4xl font-bold text-center mb-12 text-pink-400">
     Contact Me
   </h2>
 
-  <form class="max-w-xl mx-auto bg-white/10 backdrop-blur-lg p-8 rounded-3xl shadow-2xl">
+ <form id="contact-form" class="max-w-xl mx-auto bg-white/10 backdrop-blur-lg p-8 rounded-3xl shadow-2xl">
 
-    <input
-      type="text"
-      placeholder="Your Name"
-      required
-      class="w-full p-4 rounded-xl mb-4 text-black focus:outline-none focus:ring-4 focus:ring-pink-400">
+  <input
+    type="text"
+    id="name"
+    placeholder="Your Name"
+    required
+    class="w-full p-4 rounded-xl mb-4 text-black">
 
-    <input
-      type="email"
-      placeholder="Your Email"
-      required
-      class="w-full p-4 rounded-xl mb-4 text-black focus:outline-none focus:ring-4 focus:ring-pink-400">
+  <input
+    type="email"
+    id="email"
+    placeholder="Your Email"
+    required
+    class="w-full p-4 rounded-xl mb-4 text-black">
 
-    <textarea
-      rows="5"
-      placeholder="Your Message"
-      required
-      class="w-full p-4 rounded-xl mb-4 text-black focus:outline-none focus:ring-4 focus:ring-pink-400"></textarea>
+  <textarea
+    id="message"
+    rows="5"
+    placeholder="Your Message"
+    required
+    class="w-full p-4 rounded-xl mb-4 text-black"></textarea>
 
-    <p class="text-sm text-gray-300 mb-4">
-      * Please fill all fields before submitting.
-    </p>
+  <!-- ADD THESE TWO LINES HERE -->
+  <p id="error-msg" class="text-red-400 mb-2"></p>
+  <p id="success-msg" class="text-green-400 mb-2"></p>
 
-    <button
-      type="submit"
-      class="w-full bg-gradient-to-r from-pink-500 to-purple-600 py-4 rounded-xl font-semibold hover:scale-105 transition duration-300">
-      Send Message 🚀
-    </button>
+  <p class="text-sm text-gray-300 mb-4">
+    * Please fill all fields before submitting.
+  </p>
 
-  </form>
+  <button
+    type="submit"
+    class="w-full bg-gradient-to-r from-pink-500 to-purple-600 py-4 rounded-xl">
+    Send Message 🚀
+  </button>
 
+</form>
 </section>
     <!-- Footer -->
     <footer class="py-10 text-center">
@@ -240,5 +262,31 @@ real-world problems.
 </p>
 
 </footer>
+<div id="modal"
+class="fixed inset-0 bg-black/80 hidden flex justify-center items-center">
+
+<div class="bg-white text-black p-8 rounded-xl max-w-md">
+
+<button id="closeModal"
+class="float-right text-red-500">
+X
+</button>
+
+<h2 class="text-2xl font-bold mb-4">
+Project Details
+</h2>
+
+<p>
+More information about the selected project.
+</p>
+
+</div>
+</div>
+<button id="topBtn"
+class="hidden fixed bottom-5 right-5 bg-pink-500 px-4 py-3 rounded-full">
+↑
+</button>
+<script src="index.js"></script>
+
 </body>
 </html>

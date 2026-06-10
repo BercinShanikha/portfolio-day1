@@ -214,7 +214,10 @@ footer{
 /* Responsive */
 
 @media(max-width:768px){
-
+.light-mode{
+background:white;
+color:black;
+}
     nav{
         flex-direction:column;
         gap:15px;
@@ -236,4 +239,62 @@ footer{
     .section{
         padding:60px 5%;
     }
+}
+
+/*blinking cursor*/
+#typing-text::after {
+    content: "|";
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+/*fade in animation*/
+.fade-section {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 1.5s ease;
+}
+
+.fade-section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.nav-link {
+    color: white;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #f472b6;
+}
+
+/*text colour in light light-mode*/
+.light-mode p {
+    color: black;
+}
+
+.light-mode .text-gray-300 {
+    color: black !important;
+}
+
+.light-mode .text-gray-200 {
+    color: black !important;
+}
+.light-mode {
+    background: #f8fafc !important;
+    color: black !important;
+    background-image: none !important;
+}
+/* Footer stays same in Light Mode */
+
+.light-mode footer p {
+    color: #9ca3af !important;
+}
+
+.light-mode footer i {
+    color: inherit;
 }
